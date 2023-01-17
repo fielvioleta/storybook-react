@@ -1,0 +1,102 @@
+.Alerts {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    width: 400px;
+    border-radius: 4px;
+    position: relative;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    text-align: left;
+    
+    hr {
+        opacity: 0.25;
+    }
+    
+    &.primary {
+        background: #CFE2FF;
+        border: 1px solid #B6D4FE;
+        color: #084298;
+
+        hr {
+            border-top: 1px solid #084298;
+        }
+    }
+    
+    &.secondary {
+        background: #E2E3E5;
+        border: 1px solid #D3D6D8;
+        color: #41464B;
+    }
+    
+    &.success {
+        background: #D1E7DD;
+        border: 1px solid #BADBCC;
+        color: #0F5132;
+    }
+    
+    &.danger {
+        background: #F8D7DA;
+        border: 1px solid #F5C2C7;
+        color: #842029;
+    }
+    
+    &.warning {
+        background: #FFF3CD;
+        border: 1px solid #FFECB5;
+        color: #664D03;
+    }
+    
+    &.info {
+        background: #CFF4FC;
+        border: 1px solid #B6EFFB;
+        color: #055160;
+    }
+    
+    &.light {
+        background: #FEFEFE;
+        border: 1px solid #FDFDFE;
+        color: #636464;
+    }
+    
+    &.dark {
+        background: #D3D3D4;
+        border: 1px solid #BCBEBF;
+        color: #141619;
+    }
+
+    .closeButton {
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .message {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        margin-top: 8px;
+    }
+
+    .subMessage {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        width: 100%;
+    }
+
+    .divider {
+        margin: 16px 0;
+    }
+}
