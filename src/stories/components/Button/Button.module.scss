@@ -1,0 +1,248 @@
+.Button {
+
+    Button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        background-color: unset;
+        cursor: pointer;
+
+        &:disabled {
+            cursor: unset;
+            opacity: 0.65;
+        }
+    }
+
+    // size section
+    .small {
+        padding: 4px 8px;
+        height: 31px;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    .medium {
+        height: 38px;
+        padding: 6px 12px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .large {
+        height: 48px;
+        padding: 8px 16px;
+        font-weight: 300;
+        font-size: 20px;
+    }
+
+    // type section
+    .primary {
+        background: #0D6EFD;
+        border: 1px solid #0D6EFD;
+        color: #FFFFFF;
+
+        &:hover:enabled {
+            background: #0B5ED7;
+            border: 1px solid #0A58CA;
+        }
+    }
+
+    
+    .secondary {
+        background: #6C757D;
+        border: 1px solid #6C757D;
+        color: #FFFFFF;
+
+        &:hover:enabled {
+            background: #5C636A;
+            border: 1px solid #565E64;
+        }
+    }
+
+    
+    .link {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid rgba(255, 255, 255, 1e-06);
+        color: #0D6EFD;
+
+        &:hover:enabled {
+            background: rgba(255, 255, 255, 1e-06);
+            border: 1px solid rgba(255, 255, 255, 1e-06);
+        }
+    }
+    
+    .success {
+        background: #198754;
+        border: 1px solid #198754;
+        color: #FFFFFF;
+
+        &:hover:enabled {
+            background: #157347;
+            border: 1px solid #146C43;
+        }
+    }
+
+    
+    .danger {
+        background: #DC3545;
+        border: 1px solid #DC3545;
+        color: #FFFFFF;
+
+        &:hover:enabled {
+            background: #BB2D3B;
+            border: 1px solid #B02A37;
+        }
+    }
+
+    
+    .warning {
+        background: #FFC107;
+        border: 1px solid #FFC107;
+        color: #000000;
+
+        &:hover:enabled {
+            background: #FFCA2C;
+            border: 1px solid #FFC720;
+        }
+    }
+
+    
+    .info {
+        background: #0DCAF0;
+        border: 1px solid #0DCAF0;
+        color: #000000;
+
+        &:hover:enabled {
+            background: #31D2F2;
+            border: 1px solid #25CFF2;
+        }
+    }
+
+    
+    .light {
+        background: #F8F9FA;
+        border: 1px solid #F8F9FA;
+        color: #000000;
+
+        &:hover:enabled {
+            background: #F9FAFB;
+            border: 1px solid #F9FAFB;
+        }
+    }
+
+    
+    .dark {
+        background: #212529;
+        border: 1px solid #212529;
+        color: #FFFFFF;
+
+        &:hover:enabled {
+            background: #1C1F23;
+            border: 1px solid #1A1E21;
+        }
+    }
+
+    
+    .outlinePrimary {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid #0D6EFD;
+        color: #0D6EFD;
+
+        &:hover:enabled {
+            background: #0D6EFD;
+            border: 1px solid #0D6EFD;
+            color: #FFFFFF;
+        }
+    }
+
+    
+    .outlineSecondary {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid  #6C757D;
+        color: #6C757D;
+
+        &:hover:enabled {
+            background: #6C757D;
+            border: 1px solid #6C757D;
+            color: #FFFFFF;
+        }
+    }
+
+    
+    .outlineSuccess {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid #198754;
+        color: #198754;
+
+        &:hover:enabled {
+            background: #198754;
+            border: 1px solid #198754;
+            color: #FFFFFF;
+        }
+    }
+
+    
+    .outlineDanger {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid #DC3545;
+        color: #DC3545;
+
+        &:hover:enabled {
+            background: #DC3545;
+            border: 1px solid #DC3545;
+            color: #FFFFFF;
+        }
+    }
+
+    
+    .outlineWarning {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid #FFC107;
+        color: #FFC107;
+
+        &:hover:enabled {
+            background: #FFC107;
+            border: 1px solid #FFC107;
+            color: #000000;
+        }
+    }
+
+    
+    .outlineInfo {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid #0DCAF0;
+        color: #0DCAF0;
+
+        &:hover:enabled {
+            background: #0DCAF0;
+            border: 1px solid #0DCAF0;
+            color: #000000;
+        }
+    }
+
+    
+    .outlineLight {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid #F8F9FA;
+        color: #F8F9FA;
+
+        &:hover:enabled {
+            background: #F8F9FA;
+            border: 1px solid #F8F9FA;
+            color: #000000;
+        }
+    }
+
+    
+    .outlineDark {
+        background: rgba(255, 255, 255, 1e-06);
+        border: 1px solid #212529;
+        color: #212529;
+
+        &:hover:enabled {
+            background: #212529;
+            border: 1px solid #212529;
+            color: #FFFFFF;
+        }
+    }
+}
