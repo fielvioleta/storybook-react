@@ -1,16 +1,13 @@
 import './App.css';
 import Button from './stories/components/Button/Button';
+import Modal from './stories/components/Modal/Modal';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div className="App">
 
-      <Button 
-        size="large"
-        type="outline-primary"
-        disabled={true}
-        label="Hello"
-      />
+      <Modal />
 
     </div>
   );
