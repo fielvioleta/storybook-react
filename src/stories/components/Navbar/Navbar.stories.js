@@ -2,19 +2,23 @@
 import Navbar from './Navbar';
 
 export default {
-  title: "Example/Navbar",
+  title: "Components/Navbar",
   component: Navbar
 };
 
-export const Light = (args) => <Navbar {...args}/>;
-export const Dark = (args) => <Navbar {...args}/>;
+const LightTemplate = (args) => <Navbar {...args}/>;
+const DarkTemplate = (args) => <Navbar {...args}/>;
 
-Light.story = {
+
+export const Light = LightTemplate.bind({})
+export const Dark = DarkTemplate.bind({})
+
+Light.args = {
   name: 'Light',
   dark: false
 };
 
-Dark.story = {
+Dark.args = {
   name: 'Dark',
   dark: true
 }

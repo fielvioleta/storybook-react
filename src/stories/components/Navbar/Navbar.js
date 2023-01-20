@@ -4,7 +4,9 @@ import styles from './Navbar.module.scss';
 
 const Navbar = (props) => (
   <div className={styles.Navbar} data-testid="Navbar">
-    <nav className={`navbar navbar-expand-lg navbar-light bg-light`}>
+    <nav className={`navbar navbar-expand-lg 
+    navbar-${props.dark ? 'dark': 'light'} 
+    bg-${props.dark ? 'dark': 'light'}`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#navbar">Navbar</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
