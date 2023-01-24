@@ -3,10 +3,13 @@ import Radio from './Radio';
 
 export default {
   title: "Form/Radio",
+  component: Radio
 };
 
-export const Default = () => <Radio />;
+const RadioTemplate = (args) => <Radio {...args}/>;
 
-Default.story = {
-  name: 'default',
+export const Simple = RadioTemplate.bind({})
+
+Simple.args = {
+  label: 'Sample Radio Button'
 };

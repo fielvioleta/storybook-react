@@ -3,10 +3,15 @@ import TextField from './TextField';
 
 export default {
   title: "Form/TextField",
+  component: TextField
 };
 
-export const Default = () => <TextField />;
+const TextFieldTemplate = (args) => <TextField {...args}/>;
 
-Default.story = {
-  name: 'default',
+export const Simple = TextFieldTemplate.bind({})
+
+Simple.args = {
+  label: 'Field Label',
+  placeholder: 'placeholder text',
+  size: 'lg',
 };

@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Navbar.module.scss';
 
-const Navbar = (props) => (
+const Navbar = (props) => {
+  return (
   <div className={styles.Navbar} data-testid="Navbar">
     <nav className={`navbar navbar-expand-lg 
     navbar-${props.dark ? 'dark': 'light'} 
@@ -31,7 +32,8 @@ const Navbar = (props) => (
       </div>
     </nav>
   </div>
-);
+  )
+};
 
 Navbar.propTypes = {
   dark: PropTypes.bool

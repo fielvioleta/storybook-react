@@ -11,6 +11,5 @@ const SimpleListTemplate = (args) => <List {...args}/>;
 export const Simple = SimpleListTemplate.bind({})
 
 Simple.story = {
-  name: 'Simple',
-  number: 5
+  name: 'Simple'
 };

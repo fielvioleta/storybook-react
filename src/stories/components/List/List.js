@@ -15,11 +15,9 @@ const List = (props) => (
 );
 
 List.propTypes = {
-  items: PropTypes.number,
 };
 
 List.defaultProps = {
-  items: 5
 };
 
 export default List;

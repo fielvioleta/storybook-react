@@ -8,12 +8,12 @@ export default {
 
 const CardTemplate = (args) => <Cards {...args}/>;
 
-export const Card = CardTemplate.bind({})
+export const Simple = CardTemplate.bind({})
 
-Card.args = {
+Simple.args = {
   width: 400,
   center: false,
-  image: '',
+  image: 'https://t4.ftcdn.net/jpg/02/66/72/41/360_F_266724172_Iy8gdKgMa7XmrhYYxLCxyhx6J7070Pr8.jpg',
   hasHeading: true,
   headingText: 'Heading Text',
   hasFooter: true,
