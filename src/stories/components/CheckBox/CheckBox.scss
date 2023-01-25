@@ -1,0 +1,33 @@
+.CheckBox {
+    input[type='checkbox']{
+        &.primary:checked {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        
+        &.success:checked {
+            background-color: #198754;
+            border-color: #198754;
+        }
+
+        &.danger:checked {
+            background-color: #DC3545;
+            border-color: #DC3545;
+        }
+    }
+
+    .form-check-label {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        
+        &.primary {
+        }
+        &.success {
+            color: #198754;
+        }
+        &.danger {
+            color: #DC3545;
+        }
+    }
+}
