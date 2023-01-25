@@ -1,29 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Tooltip.module.scss';
+import "./Tooltip.css"
 
-function Tooltip() {
+const Tooltip = (props) =>{
+  let timeout;
+  const [active, setActive] = useState(false);
+
+  const showTip = () => {
+    timeout = setTimeout(() => {
+      setActive(true);
+    }, props.delay || 400);
+  };
+
+  const hideTip = () => {
+    clearInterval(timeout);
+    setActive(false);
+  };
+
   return (
     <div className={styles.Tooltip} data-testid="Tooltip">
-      <button type="button" className="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
-        Tooltip on top
-      </button>
-      <button type="button" className="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
-        Tooltip on right
-      </button>
-      <button type="button" className="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
-        Tooltip on bottom
-      </button>
-      <button type="button" className="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
-        Tooltip on left
-      </button>
+      <div
+        className={`Tooltip-Wrapper`}
+        onMouseEnter={showTip}
+        onMouseLeave={hideTip}
+      >
+
+        {props.children}
+
+        {active && (
+          <div className={`Tooltip-Tip ${props.direction || "top"}`}>
+            {props.content}
+          </div>
+        )}
+        
+      </div>
     </div>
   );
 
 }
 
-Tooltip.propTypes = {};
+Tooltip.propTypes = {
+  direction: PropTypes.oneOf(['right','left','top','bottom']),
+  content: PropTypes.any,
+  children: PropTypes.any
+};
 
-Tooltip.defaultProps = {};
+Tooltip.defaultProps = {
+  direction: 'right',
+  content: '',
+  children: ''
+};
 
 export default Tooltip;
