@@ -2,7 +2,7 @@
 import CheckBox from './CheckBox';
 
 export default {
-  title: "Example/CheckBox",
+  title: "Form/CheckBox",
   component: CheckBox
 };
 

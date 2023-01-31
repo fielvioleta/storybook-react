@@ -2,7 +2,7 @@
 import Alerts from './Alerts';
 
 export default {
-  title: "Example/Alerts",
+  title: "Components/Alerts",
   component: Alerts
 };
 

@@ -2,7 +2,7 @@
 import Modal from './Modal';
 
 export default {
-  title: "Example/Modal",
+  title: "Components/Modal",
   component: Modal
 };
 

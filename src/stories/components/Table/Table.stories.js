@@ -2,7 +2,7 @@
 import Table from './Table';
 
 export default {
-  title: "Example/Table",
+  title: "Components/Table",
   component: Table
 };
 
