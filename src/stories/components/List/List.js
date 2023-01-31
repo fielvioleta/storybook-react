@@ -4,20 +4,19 @@ import styles from './List.module.scss';
 
 const List = (props) => (
   <div className={styles.List} data-testid="List">
-    <ul className="list-group">
-      <li className="list-group-item active" aria-current="true">An item</li>
-      <li className="list-group-item">A second item</li>
-      <li className="list-group-item">A third item</li>
-      <li className="list-group-item">A fourth item</li>
-      <li className="list-group-item">And a fifth one</li>
+    <ul className={`list-group list-group-${props.type}`}>
+      { props.children }
     </ul>
   </div>
 );
 
 List.propTypes = {
+  type: PropTypes.oneOf(['default','flush','numbered','horizontal']),
+  children: PropTypes.any
 };
 
 List.defaultProps = {
+  type: 'default'
 };
 
 export default List;

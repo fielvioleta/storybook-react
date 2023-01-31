@@ -5,7 +5,13 @@
     --tooltip-margin: 30px;
     --tooltip-arrow-size: 6px;
   }
-  
+
+  .emoji {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
   /* Wrapping */
   .Tooltip-Wrapper {
     display: inline-block;
@@ -38,7 +44,7 @@
     position: absolute;
     pointer-events: none;
     border-width: var(--tooltip-arrow-size);
-    margin-left: calc(var(--tooltip-arrow-size) * -1);
+    margin-left: calc(var(--tooltip-arrow-size) * -0.9);
   }
   
   /* Absolute positioning */
@@ -85,7 +91,7 @@
   /* CSS border triangles */
   .Tooltip-Tip.left::before {
     left: auto;
-    right: calc(var(--tooltip-arrow-size) * -2);
+    right: calc(var(--tooltip-arrow-size) * -1.9);
     top: 50%;
     transform: translateX(0) translateY(-50%);
     border-left-color: var(--tooltip-background-color);

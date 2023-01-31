@@ -11,6 +11,7 @@ const TextFieldTemplate = (args) => <TextField {...args}/>;
 export const Simple = TextFieldTemplate.bind({})
 
 Simple.args = {
+  type: 'text',
   label: 'Field Label',
   placeholder: 'placeholder text',
   size: 'lg',

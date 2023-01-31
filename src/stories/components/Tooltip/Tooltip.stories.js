@@ -1,4 +1,5 @@
 /* eslint-disable */
+import TextField from '../TextField/TextField';
 import Tooltip from './Tooltip';
 
 export default {
@@ -6,38 +7,40 @@ export default {
   component: Tooltip
 };
 
-const RightTemplate = (args) => <Tooltip {...args}/>;
+const Template = (args) => <Tooltip {...args}/>;
 
 
-export const Html = RightTemplate.bind({})
+export const Html = Template.bind({})
 Html.args = {
-  direction: 'bottom',
-  content: <span role="img" aria-label="rabbit emoji">HTML <strong>tooltip:</strong> 🐇</span>,
-  children: <div className="example-wrapper">HTML Children</div>
+  direction: 'right',
+  content: <span role="img" aria-label="rabbit emoji" className='emoji'>HTML <strong>tooltip:</strong> 🐇</span>,
+  children: <div className="example-wrapper">
+      <TextField size={'lg'} placeholder={'HTML Children'}></TextField>
+    </div>
 };
 
-export const Right = RightTemplate.bind({})
+export const Right = Template.bind({})
 Right.args = {
   direction: 'right',
   content: 'Right',
   children: 'Right'
 };
 
-export const Left = RightTemplate.bind({})
+export const Left = Template.bind({})
 Left.args = {
   direction: 'left',
   content: 'Left',
   children: 'Left'
 };
 
-export const Top = RightTemplate.bind({})
+export const Top = Template.bind({})
 Top.args = {
   direction: 'top',
   content: 'Top',
   children: 'Top'
 };
 
-export const Bottom = RightTemplate.bind({})
+export const Bottom = Template.bind({})
 Bottom.args = {
   direction: 'bottom',
   content: 'Bottom',

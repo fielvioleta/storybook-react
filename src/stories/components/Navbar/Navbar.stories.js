@@ -14,11 +14,13 @@ export const Light = LightTemplate.bind({})
 export const Dark = DarkTemplate.bind({})
 
 Light.args = {
+  ...Navbar.args,
   name: 'Light',
-  dark: false
+  dark: false,
 };
 
 Dark.args = {
+  ...Navbar.args,
   name: 'Dark',
   dark: true
 }

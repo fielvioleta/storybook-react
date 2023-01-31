@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Navbar.module.scss';
+import defaultLogo from '../../assets/erni-logo.svg';
 
 const Navbar = (props) => {
   return (
@@ -9,7 +10,11 @@ const Navbar = (props) => {
     navbar-${props.dark ? 'dark': 'light'} 
     bg-${props.dark ? 'dark': 'light'}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#navbar">Navbar</a>
+        <a className="navbar-brand" href="#navbar">
+          { props.logo ? 
+            <img src={ props.logo } alt={ props.title } width="100px"/>
+          : null}
+        </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -36,11 +41,15 @@ const Navbar = (props) => {
 };
 
 Navbar.propTypes = {
-  dark: PropTypes.bool
+  title: PropTypes.string,
+  dark: PropTypes.bool,
+  logo: PropTypes.string,
 };
 
 Navbar.defaultProps = {
-  dark: false
+  title: 'ERNI Storybook',
+  dark: false,
+  logo: defaultLogo
 };
 
 export default Navbar;
